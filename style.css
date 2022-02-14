@@ -1,0 +1,349 @@
+:root{
+    --ligthBlue: #1992d4;
+    --gray: #e2e8f0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+
+  body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e2e8f0;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p{
+    color: #636363;
+  }
+
+  .container{
+      display: grid;
+      grid-template-columns: 278px minmax(867px, auto);
+      grid-template-rows: 188px auto;
+      min-height: 100vh;
+      max-width: 1920px;
+      margin: 0 auto;
+  }
+
+  /*Sidebar*/
+
+  h1{
+      font-size: 28.21px;
+      display: inline-block;
+      color: white;
+  }
+
+  .logo{
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 47px;
+  }
+
+  .sidebar{
+      padding: 23px;
+      background-color: var(--ligthBlue);
+      width: 278px;
+      grid-row: 1 / -1;
+  }
+
+  .sidebar ul{
+      margin-bottom: 49px;
+  }
+
+  .sidebar li{
+      margin-bottom: 20px;
+  }
+
+  .sidebar li a img{
+    color: white;
+  }
+
+  .side-bar-icon{
+    transform: translateY(4px);
+    display: inline-block;
+    width: 24px;
+    margin-right: 27px;
+}
+
+  .side-bar-icon:hover + a{
+    border-bottom: 2px solid white;
+  }
+
+    .sidebar li a{
+      font-size: 21.7px;
+      text-decoration: none;
+      color: white;
+      transition: 100ms ease-in-out;
+  }
+
+  .sidebar li a:nth-of-type(2):hover{
+    border-bottom: 2px solid white;
+  }
+
+  .white{
+    filter: invert(92%) sepia(99%) saturate(31%) hue-rotate(247deg) brightness(108%) contrast(100%);
+  }
+
+  /*Header*/
+
+  header{
+      background-color: white;
+      display: grid;
+      grid-template-rows: 90px 90px;
+      padding: 0 60px 0 45px;
+      box-shadow: 5px 7px 11px rgb(108 108 108 / 19%);
+  }
+
+  nav div{
+      display: inline-block;
+  }
+
+  #search-box{
+    font-size: 17px;
+    padding: 4px 10px;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 14px;
+  }
+
+  #search-box:focus-visible{
+    outline: none;
+    box-shadow: 5px 7px 11px rgb(108 108 108 / 19%);
+  }
+
+  form.hide-submit input[type='submit']{
+      display: none;
+  }
+
+  .search-button{
+      cursor: pointer; 
+      transform: translateY(7px);
+  }
+
+  .profile-picture{
+      width: 70px;
+      border-radius: 50%;
+  }
+
+  .profile-picture.small{
+      width: 42px;
+  }
+
+  nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-user-panel{
+      display: grid;
+      width: 254px;
+      grid-template-columns: 40px 40px 185px;
+      align-items: center;
+      justify-items: start;
+  }
+
+  .user-panel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-name{
+    justify-self: center;
+    font-size: 20px
+  }
+
+  .user-name-greetings{
+    line-height: 1.4;
+    font-size: 23.71px;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .user-name-greetings span{
+    font-size: 16px;
+  }
+
+  .user-panel-section-1{
+    display: inline-flex;
+    gap: 22px;
+  }
+
+  .user-panel-section-2 button{
+    font-size: 15.6px;
+    width: 100px;
+    background-color: var(--ligthBlue);
+    color: white;
+    font-weight: 700;
+    padding: 10px 23px 9px 23px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+  }
+
+  .user-panel-section-2 button:hover{
+    background-color: #14a0ed;
+  }
+
+  .user-panel-section-2 button:not(:last-of-type){
+    margin-right: 25px;
+  }
+
+  .user-panel-section-2{
+    transform: translateY(10px);
+  }
+
+  /*Projects Cards*/
+
+  .projects-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .project-card{
+    background-color: white;
+    min-height: 112px;
+    padding: 32px 41px 0px 41px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    box-shadow: 5px 7px 11px rgb(108 108 108 / 19%);
+  }
+
+  .project-card::after{
+    content: '';
+    width: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: block;
+    background-color: #f0b429;
+    overflow: none;
+  }
+
+  .project-card h3{
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .projects-title, .announcements-title, .trending-title{
+    font-size: 19px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: black;
+  }
+
+  .card-buttons{
+    width: 122px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 25px;
+    right: 45px;
+  }
+
+  .card-buttons a{
+    transition: 100ms ease-in-out;
+  }
+
+  .card-buttons a:hover{
+    transform: scale(1.2);
+  }
+
+  /*Main Container*/
+
+  main{
+    padding: 35px 30px 25px 18px;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 22px;
+  }
+
+  .announcements{
+    background: white;
+    padding: 32px 27px 0px 27px;
+    border-radius: 13px;
+  }
+
+  .announcements hr{
+    border-color: #d2d2d2;
+  }
+
+  .announcements-container{
+    margin-bottom: 25px;
+  }
+
+  .announcements div{
+    padding-bottom: 14px;
+  }
+  
+  .announcements div h4{
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .trending{
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 13px;
+    padding: 23px;
+  }
+
+  .trending li a{
+    text-decoration: none;
+    color: black;
+    transition: 100ms ease-in-out;
+  }
+
+  .trending li a:hover{
+    color: #6d7fe6;
+  }
+
+  .trending li p{
+    color: #636363;
+  }
+
+  .trending li{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .account-info{
+    line-height: 1.4;
+  }
+
+  .announcements, .trending{
+    box-shadow: 5px 7px 11px rgb(108 108 108 / 19%);
+  }
